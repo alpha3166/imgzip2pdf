@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ws:
+    build:
+      context: ../..
+      dockerfile: docker/imgzip2pdf_cli/Dockerfile
+    image: imgzip2pdf-cli
+    user: 1000:1000
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
